@@ -5,7 +5,7 @@ const Login = require("./login/index");
 router.get("/", (req, res) => {
   res.json({
     code: 200,
-    message: "欢迎进入3030",
+    message: "欢迎进入9700",
   });
 });
 
