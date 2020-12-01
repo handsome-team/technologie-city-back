@@ -16,6 +16,7 @@ exports.open = (host, user, password, database, errcallback, success) => {
     user: user,
     password: password,
     database: database,
+    useConnectionPooling: true
   });
   connection.connect((err) => {
     err
