@@ -1,7 +1,7 @@
 const mysql = require("../../module/mysql");
 
 exports.getUser = (req, res) => {
-  mysql.open("8.131.83.251", "root", "123456", "nationalScience");
+  mysql.open("8.131.83.251", "root", "94946", "nationalScience");
   let sql = "SELECT * FROM `user`";
   mysql.handleData(
     sql,
