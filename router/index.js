@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Login = require("./login/index");
+const Company = require("./company/company");
 
 router.get("/", (req, res) => {
   res.json({
@@ -10,5 +11,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/user", Login.getUser);
+router.get("/company", Company.getCompanyData);
+router.get("/company/detail", Company.getCompanyDetailData);
 
 module.exports = router;
