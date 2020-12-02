@@ -15,9 +15,9 @@ exports.open = (host, user, password, database, errcallback, success) => {
     host: host,
     user: user,
     password: password,
-    database: database,
+    database: database
   });
-  connection.connect((err) => {
+  connection.connect(err => {
     err
       ? typeof errcallback === "function" && errcallback.call(null, err)
       : typeof success === "function" && success.call();
