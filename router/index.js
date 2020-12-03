@@ -3,7 +3,7 @@ const router = express.Router();
 const Login = require("./login/index");
 const Userpro = require("./user/index");
 const Aboutus = require("./about/index");
-const Company = require("./");
+const Company = require("./company/company");
 const Qualifications = require("./qualifications/qualifications");
 router.get("/", (req, res) => {
   res.json({

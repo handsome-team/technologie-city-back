@@ -8,14 +8,13 @@ exports.getCompanyDetailData = (req, res) => {
   mysql.handleData(
     sql,
     id,
-    (result) => {
-      console.log(result);
+    result => {
       res.json({
         code: 200,
-        data: result,
+        data: result
       });
     },
-    (err) => {
+    err => {
       console.log(err);
     }
   );
@@ -28,14 +27,13 @@ exports.getCompanyData = (req, res) => {
   mysql.handleData(
     sql,
     null,
-    (result) => {
-      console.log(result);
+    result => {
       res.json({
         code: 200,
-        data: result,
+        data: result
       });
     },
-    (err) => {
+    err => {
       console.log(err);
     }
   );
