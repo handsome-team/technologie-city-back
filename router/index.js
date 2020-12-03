@@ -3,8 +3,9 @@ const router = express.Router();
 const Login = require("./login/index");
 const Userpro = require("./user/index");
 const Aboutus = require("./about/index");
-const Company = require("./");
-const Qualifications = require("./qualifications/qualifications");
+const Company = require('./company/company')
+const Home = require('./home/home')
+const Qualifications = require('./qualifications/qualifications')
 router.get("/", (req, res) => {
   res.json({
     code: 200,
@@ -17,9 +18,9 @@ router.get("/user", Login.getUser);
 router.get("/userpro", Userpro.getUserProject);
 // 关于我们
 router.get("/aboutus", Aboutus.getAboutData);
-router.get("/user", Login.getUser);
 router.get("/company", Company.getCompanyData);
 router.get("/company/detail", Company.getCompanyDetailData);
 router.post("/qualifications", Qualifications.getConnect);
+router.post('/message',Home.takeMessage)
 
 module.exports = router;
