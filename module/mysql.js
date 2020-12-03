@@ -18,7 +18,7 @@ exports.open = (host, user, password, database, errcallback, success) => {
     database: database,
     useConnectionPooling: true
   });
-  connection.connect((err) => {
+  connection.connect(err => {
     err
       ? typeof errcallback === "function" && errcallback.call(null, err)
       : typeof success === "function" && success.call();
