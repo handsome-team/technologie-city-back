@@ -11,6 +11,7 @@ let connection = null;
 // mysql打开
 // localhost root 12345678 book
 exports.open = (host, user, password, database, errcallback, success) => {
+  console.log('数据库打开')
   connection = mysql.createConnection({
     host: host,
     user: user,
