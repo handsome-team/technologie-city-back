@@ -8,7 +8,7 @@ exports.getCompanyDetailData = (req, res) => {
   mysql.handleData(
     sql,
     id,
-    (result) => {
+    result => {
       res.json({
         code: 200,
         data: result
@@ -27,11 +27,7 @@ exports.getCompanyData = (req, res) => {
   mysql.handleData(
     sql,
     null,
-<<<<<<< HEAD
     result => {
-=======
-    (result) => {
->>>>>>> main
       res.json({
         code: 200,
         data: result

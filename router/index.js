@@ -2,12 +2,10 @@ const express = require("express");
 const router = express.Router();
 // const Login = require("./login/index");
 const Company = require("./company/company");
-const Login = require("./login/index");
 const Product = require("./product/index");
 
 const Userpro = require("./user/index");
 const Aboutus = require("./about/index");
-const Company = require("./company/company");
 const Home = require("./home/home");
 const Qualifications = require("./qualifications/qualifications");
 router.get("/", (req, res) => {
@@ -17,7 +15,6 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/user", Login.getUser);
 // 产品中心
 router.post("/product", Product.getdata);
 // 用户案例
